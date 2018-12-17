@@ -66,6 +66,8 @@ where this project was mentioned or used!
 
 ### Blogs & Articles
 
+* Blog post on [Jannik Hollenbach's blog](https://medium.com/@j12934): [Testing out ModSecurity CRS with OWASP JuiceShop
+](https://medium.com/@j12934/testing-out-modsecurity-crs-with-owasp-juiceshop-649830932365)
 * OWASP Portland Chapter meeting writeup on the [Daylight Blog](https://thedaylightstudio.com/blog): [Vulnerability Hunting Practice Using OWASP Juice Shop](https://thedaylightstudio.com/blog/2018/11/20/vulnerability-hunting-practice-using-owasp-juice-shop)
 * Blog post on [Security Boulevard](https://securityboulevard.com):
   [From Dev to InfoSec Part 1 – The Journey Begins](https://securityboulevard.com/2018/08/from-dev-to-infosec-part-1-the-journey-begins/)
@@ -135,18 +137,18 @@ where this project was mentioned or used!
 
 ## Conference and Meetup Appearances
 
-#### Upcoming
+#### 2018
 
 * [Juice Shop: OWASP's most broken Flagship](https://www.owasp.org/index.php/OWASP_BeNeLux-Days_2018#tab=Conference_Day)
   by Björn Kimminich, [OWASP BeNeLux Days 2018](https://www.owasp.org/index.php/OWASP_BeNeLux-Days_2018),
-  30.11.2018
-
-#### 2018
-
+  30.11.2018 ([Youtube](https://youtu.be/Lu0-kDdtVf4) :bulb:)
+* [OWASP Zap](https://www.owasp.org/index.php/OWASP_BeNeLux-Days_2018#tab=Conference_Day)
+  by David Scrobonia, [OWASP BeNeLux Days 2018](https://www.owasp.org/index.php/OWASP_BeNeLux-Days_2018),
+  30.11.2018 ([Youtube](https://youtu.be/iaZaPuQ6ams))
 * [The traditional/inevitable OWASP Juice Shop update](https://owasp.github.io/german-owasp-day/archive/2018/)
   by Björn Kimminich,
   [German OWASP Day 2018](https://owasp.github.io/german-owasp-day/archive/2018/),
-  20.11.2018
+  20.11.2018 ([Youtube](https://youtu.be/2oNfZo2H4uA))
 * [Workshop: OWASP Juice Shop](https://owasp.github.io/german-owasp-day/archive/2018/)
   by Björn Kimminich,
   [German OWASP Day 2018](https://owasp.github.io/german-owasp-day/archive/2018/),
