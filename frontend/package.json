@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -45,7 +47,8 @@
     "rxjs": "6.3.3",
     "socket.io-client": "^2.1.1",
     "typescript": "~3.1.6",
-    "zone.js": "^0.8.26"
+    "zone.js": "^0.8.26",
+    "snyk": "^1.258.2"
   },
   "devDependencies": {
     "@angular/language-service": "^7.0.3",
@@ -64,5 +67,6 @@
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
     "tslint-config-standard": "~7.0.0"
-  }
+  },
+  "snyk": true
 }
