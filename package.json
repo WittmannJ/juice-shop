@@ -95,7 +95,7 @@
     "pdfkit": "~0.8",
     "replace": "~1.0.0",
     "request": "~2.88.0",
-    "sanitize-html": "1.4.2",
+    "sanitize-html": "1.7.1",
     "semver": "~5.6.0",
     "sequelize": "~4.42.0",
     "serve-index": "~1.9",
