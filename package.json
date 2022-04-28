@@ -100,7 +100,7 @@
     "sequelize": "~4.42.0",
     "serve-index": "~1.9",
     "socket.io": "~2.2.0",
-    "sqlite3": "~4.0.4",
+    "sqlite3": "~5.0.3",
     "swagger-ui-express": "~4.0.1",
     "unzipper": "0.8.12",
     "z85": "~0.0"
