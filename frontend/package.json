@@ -43,7 +43,7 @@
     "ngx-cookie": "^4.1.2",
     "ngx-spinner": "^6.1.2",
     "rxjs": "6.3.3",
-    "socket.io-client": "^2.1.1",
+    "socket.io-client": "^3.0.0",
     "typescript": "~3.1.6",
     "zone.js": "^0.8.26"
   },
